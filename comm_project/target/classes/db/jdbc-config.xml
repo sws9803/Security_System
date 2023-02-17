@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<comment>Local configure</comment>
+ 	<entry key="db.jdbc.driver">org.mariadb.jdbc.Driver</entry>
+ 	<entry key="db.jdbc.url">jdbc:mariadb://112.220.17.34:36246/sundam</entry>
+	<entry key="db.jdbc.username">dam</entry>
+	<entry key="db.jdbc.password">dam123!@#</entry>
+	<entry key="db.jdbc.characterset">utf-8</entry>
+	<entry key="db.jdbc.initialSize">10</entry>
+	<entry key="db.jdbc.maxActive">20</entry>
+
+</properties>
+

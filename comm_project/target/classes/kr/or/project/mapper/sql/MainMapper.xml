@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="kr.or.project.mapper.MainMapper" > <!--   -->
+
+	<!-- <select id="selectMainInfo" parameterType="kr.or.project.main.model.MainInfo" resultType="String">
+ 		 SELECT 
+ 		 	NOW(),
+ 		 	TO_CHAR(SYSDATE,'YYYY-MM-DD'),
+ 		 	from dual
+ 	</select> -->
+ 	
+<!--  	<select id="selectMainInfo" parameterType="kr.or.project.main.model.MainInfo" resultType="kr.or.project.main.model.MainInfo"> -->
+<!--  		 SELECT  -->
+<!--  		 	'홍길동' as mberNm, -->
+<!-- 		 	'홍길동 ID' as mberId -->
+<!-- 		   FROM DUAL -->
+<!--  	</select> -->
+ 	
+ 	<select id="selectMainInfo" parameterType="kr.or.project.main.model.NoticeInfo" resultType="kr.or.project.main.model.NoticeInfo">
+ 		SELECT 
+		       A.NOTICE_ID noticeId, 
+		       A.NOTICE_SE noticeSe, 
+		       A.NOTICE_SJ noticeSj, 
+		       A.NOTICE_CN noticeCn, 
+		       A.ATCHMNFL atchmnfl,
+		       NVL(A.RDCNT,0) rdcnt,
+		       A.DELETE_AT deleteAt, 
+		       A.REGIST_DT registDt, 
+		       A.REGISTER register, 
+		       A.UPDT_DT updtDt, 
+		       A.UPDUSR updusr
+		  FROM NOTICE_INFO A
+		 WHERE 1 = 1
+		<if test="noticeId != null and noticeId != ''"> <!-- 값이 있다면 이라는 뜻  -->
+		   AND A.NOTICE_ID = #{noticeId}
+		</if>
+		<if test='noticeSj != null and noticeSj != ""'>
+		   AND A.NOTICE_SJ LIKE CONCAT('%',#{noticeSj},'%')
+		</if>
+		<if test='noticeCn != null and noticeCn != ""'>
+		   AND A.NOTICE_CN LIKE CONCAT('%',#{noticeCn},'%')
+		</if>
+		<if test='noticeSe != null and noticeSe != ""'>
+		   AND A.NOTICE_SE LIKE CONCAT('%',#{noticeSe},'%')
+		</if>
+		   AND A.DELETE_AT = 'N'
+ 	</select>
+ 	
+</mapper>

@@ -1,0 +1,87 @@
+ @charset "utf-8";
+/* doc.css는 디자인페이지 스타일을 정의합니다. */
+
+.greeting {}
+.greeting .head {text-align:center; margin-bottom:55px;  color:#454545;}
+.greeting .head .top {font-size:25px;line-height:1.4em;font-family: 'Noto Serif KR', serif; font-weight:600; margin-bottom:10px;}
+.greeting .head p {font-size:20px;line-height:1.4em;}
+.greeting .info {margin-bottom:45px; display:flex; align-items:center; margin-left:-60px;}
+.greeting .info .col {width:50%; padding-left:60px;}
+.greeting .info .pic {position:relative; height:0; padding-bottom:73.2%;}
+.greeting .info .pic img {position:absolute; top:50%; left:0; transform:translateY(-50%); -ms-transform:translateY(-50%); -webkit-transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; min-height:100%; object-fit:contain; transition:0.3s;}
+.greeting .info dl {margin-bottom:20px;}
+.greeting .info dl:last-child {margin-bottom:0;}
+.greeting .info dl dt {color:#ac7f1e; font-size:23px; line-height:1.4em;font-weight:600; font-family: 'Noto Serif KR', serif; margin-bottom:5px;}
+.greeting .info dl dd {font-size:16px; line-height:1.6em; color:#454545}
+.greeting .last {text-align:center;}
+.greeting .last .txt {font-size:18px; line-height:1.4em;font-weight:500; margin-bottom:10px;}
+.greeting .last .txt strong {font-weight:500; font-size:20px;}
+.greeting .last .name {font-size:20px; line-height:1.4em; font-weight:600;font-family: 'Noto Serif KR', serif;}
+
+
+.root_daum_roughmap {width:100% !important; height:450px !important;}
+.root_daum_roughmap .wrap_map {height:450px !important;}
+.roughmap_lebel_text {line-height:0 !important; font-size:0 !important;}
+.roughmap_lebel_text:after {content:"법률사무소 청향"; font-size:12px; line-height:15px;}
+
+.location-info {}
+.location-info .row {display:flex; align-items:center; border-bottom:1px solid #ddd; padding:16px 0; font-size:16px ;line-height:1.4em; color:#454545}
+.location-info .tit {padding-left:20px; flex:1 1 75px; max-width:75px;font-weight:500; color:#137f73}
+.location-info .info {flex:1 1 auto; width:1%; padding-left:20px;}
+.location-info .bar {padding:0 10px;}
+.location-info p {margin-bottom:5px;}
+.location-info p:last-child {margin-bottom:0;}
+
+
+.lawyer-list {}
+.lawyer-list ul {display:flex; flex-wrap:wrap; margin-left:-30px;margin-bottom:-30px;}
+.lawyer-list ul li {width:50%; padding-left:30px; margin-bottom:30px;}
+.lawyer-list .photo {position:relative;}
+.lawyer-list .pic {position:relative; height:0; padding-bottom:65%; overflow:hidden}
+.lawyer-list .pic img {position:absolute; top:50%; left:0; transform:translateY(-50%); -ms-transform:translateY(-50%); -webkit-transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; min-height:100%; object-fit:contain; transition:0.3s;}
+.lawyer-list .tit {position:absolute; bottom:0; left:0; width:100%; text-align:center; z-index:1;color:#fff; background:rgba(0,0,0,.5); font-size:20px; line-height:70px; font-weight:500;}
+.lawyer-list .tit strong {font-size:30px; font-weight:500; padding-left:5px;}
+.lawyer-list a:hover .pic img {transform:translateY(-50%) scale(1.04,1.04); -ms-transform:translateY(-50%) scale(1.04,1.04); -webkit-transform:translateY(-50%) scale(1.04,1.04);}
+
+.doc-tit {position:relative; padding-left:22px; font-size:20px; line-height:1.4em; color:#454545;font-weight:500; margin-bottom:15px;}
+.doc-tit:before {content:"";position:absolute; top:6px; left:0; width:15px; height:15px; border-radius:50%; border:3px solid #137f73}
+
+.indent {padding-left:22px;}
+
+.doc-text {}
+.doc-text ul li {position:relative; padding-left:15px; font-size:16px; line-height:1.6em; color:#454545; margin-bottom:3px;}
+.doc-text ul li:before {content:"";position:absolute; top:10px; left:0; width:3px; height:3px;border-radius:50%; background:#454545}
+.doc-text ul li:last-child {margin-bottom:0;}
+.doc-text .text-row {display:flex; margin-left:-15px;}
+.doc-text .text-row .col {width:50%; margin-left:15px;}
+
+.lawyer-head {display:flex; margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid #ddd;}
+.lawyer-head .photo {width:41.7%}
+.lawyer-head .pic {position:relative; height:0; padding-bottom:83%; overflow:hidden}
+.lawyer-head .pic img {position:absolute; top:50%; left:0; transform:translateY(-50%); -ms-transform:translateY(-50%); -webkit-transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; min-height:100%; object-fit:contain; transition:0.3s;}
+.lawyer-head .info {width:58.3%; padding-left:30px;}
+.lawyer-head .doc-text {margin-bottom:20px;}
+.lawyer-head .doc-text:last-child {margin-bottom:0;}
+.lawyer-head .name {font-size:30px; line-height:1.4em; color:#242424; margin-bottom:20px;font-weight:500;}
+.lawyer-head .name span {font-size:20px; color:#137f73;}
+
+.lawyer-info {padding-bottom:30px; border-bottom:1px solid #ddd; margin-bottom:60px;}
+.lawyer-info .doc-text {margin-bottom:20px;}
+.lawyer-info .doc-text:last-child {margin-bottom:0;}
+.lawyer-info .tit {font-size:18px; line-height:1.4em; color:#137f73;font-weight:500; margin-bottom:10px;}
+
+.doc-title {position:relative; padding-left:30px; font-size:20px; line-height:1.4em; color:#242424;font-weight:500; margin-bottom:20px;}
+.doc-title:before {content:"";position:absolute; top:5px; left:0; width:20px; height:20px; background:url('../images/sub/doc_dot.html')}
+
+.doc-mb {margin-bottom:60px;}
+
+.business-box {border:1px solid #ddd; border-radius:7px; display:flex; align-items:center; padding:40px 50px;}
+.business-box .photo {flex:1 1 250px; max-width:250px;}
+.business-box .pic {position:relative; height:0; padding-bottom:100%; overflow:hidden}
+.business-box .pic img {position:absolute; top:50%; left:0; transform:translateY(-50%); -ms-transform:translateY(-50%); -webkit-transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; min-height:100%; object-fit:contain; transition:0.3s;}
+.business-box .info {padding-left:50px; flex:1 1 auto; width:1%; font-size:16px; line-height:1.6em; color:#454545}
+.business-box .cnt {margin-bottom:30px;}
+.business-box .tit {color:#137f73; font-size:18px ;line-height:1.4em; font-weight:500; margin-bottom:15px;}
+.business-box .doc-text {margin-bottom:25px;}
+.business-box .doc-text:last-child {margin-bottom:0;}
+

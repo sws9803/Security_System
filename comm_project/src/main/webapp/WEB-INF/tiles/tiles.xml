@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+      
+<tiles-definitions>
+
+	<!-- <definition name="layoutBase" template="/WEB-INF/views/commonLayout/layout_intro.jsp">
+		<put-attribute name="head" value="/WEB-INF/views/commonLayout/head_intro.jsp"/>
+	</definition> -->
+	
+	<definition name="layoutMain" template="/WEB-INF/views/commonLayout/layout_main.jsp">
+		<put-attribute name="head" value="/WEB-INF/views/commonLayout/head_main.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/views/commonLayout/header_main.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/views/commonLayout/footer_main.jsp"/>
+	</definition>
+	
+	<!-- <definition name="layoutSubCommon" template="/WEB-INF/views/commonLayout/layout_sub_common.jsp">
+		<put-attribute name="head" value="/WEB-INF/views/commonLayout/head_sub.jsp"/>
+	</definition> -->
+	
+	<!-- //초기화면  -->
+	<!-- <definition name="/intro/*" extends="layoutBase">
+		<put-attribute name="content" value="/WEB-INF/views/intro/{1}.jsp" />
+	</definition> -->	
+	
+	<!-- //메인화면  -->
+	<definition name="/main/*" extends="layoutMain">
+		<put-attribute name="content" value="/WEB-INF/views/main/{1}.jsp" />
+	</definition>
+	
+	<!-- //관리자 화면  -->
+	
+</tiles-definitions>
+
+

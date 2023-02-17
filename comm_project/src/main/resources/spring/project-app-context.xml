@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+       http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+       http://www.springframework.org/schema/util 
+       http://www.springframework.org/schema/util/spring-util-4.2.xsd
+       http://www.springframework.org/schema/task 
+       http://www.springframework.org/schema/task/spring-task.xsd
+       http://www.springframework.org/schema/cache 
+       http://www.springframework.org/schema/cache/spring-cache.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<util:properties id="dbConfig" location="classpath:db/jdbc-config.xml" />
+	
+	<context:property-placeholder properties-ref="dbConfig" />
+	
+	<tx:annotation-driven transaction-manager="mariadbTransactionManager"/>
+	
+	<bean id="mariadbDataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+	   	<property name="driverClassName" value="#{dbConfig['db.jdbc.driver']}" />
+		<property name="url" value="#{dbConfig['db.jdbc.url']}" />
+		<property name="username" value="#{dbConfig['db.jdbc.username']}" />
+		<property name="password" value="#{dbConfig['db.jdbc.password']}" />
+	    <property name="initialSize" value="#{dbConfig['db.jdbc.initialSize']}"/>
+	    <property name="maxActive" value="#{dbConfig['db.jdbc.maxActive']}" />
+	    <property name="validationQuery" value="select 1 from dual"/>
+	    <property name="testWhileIdle" value="true"/>
+	    <property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+	</bean>
+	
+	
+	<!--mariadb SqlSessionFactory -->
+	<bean id="mariadbSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="mariadbDataSource"/>
+		<!-- MyBatis config 설정이 있는 xml -->
+		<property name="configLocation" value="classpath:db/mariadb-map-config.xml"/>
+		<!-- mapper xml 경로 정의 이름_sql.xml 형식을 참조 -->
+		<!-- <property name="mapperLocations" value="classpath:kr/co/ktp/pps/openapi/mapper/sql/*Mapper*.xml"/> -->
+		<property name="mapperLocations">
+			<array>
+				<value>classpath:kr/or/project/mapper/sql/*Mapper*.xml</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!-- SqlSessionTemplate -->
+	<bean id="mariadbSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="mariadbSessionFactory" />
+	</bean>
+	
+	
+	<bean id="mariadbMapper" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="kr.or.project" />
+		<property name="annotationClass" value="kr.or.project.annotation.MariaDbMapper" />
+		<property name="sqlSessionFactory" ref="mariadbSessionFactory" />
+	</bean>
+	
+	
+	<!-- mariadb transactionManager -->
+	<bean id="mariadbTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="mariadbDataSource"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+
+.main-visual {background:#f3f4f8; padding-top:10px; margin-bottom:10px;}
+.main-visual .item {position:relative; padding-bottom:10px;}
+.main-visual .more {position:absolute; bottom:0; font-size:18px; line-height:72px; color:#fff; left:30px; width:300px; padding:0 70px 0 30px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;  height:72px; background:#3e8bd4; border-radius:72px;}
+.main-visual .more:after {content:"";position:absolute; top:0; right:30px; width:18px; height:100%;  background:url('../images/main/vis_arrow.png') 50% 50% no-repeat; }
+.main-visual .control {position:absolute; bottom:10px; right:15px;display:flex;}
+.main-visual .control li {line-height:0;}
+.main-visual .control li button {width:52px; height:52px; background-color:rgba(0,0,0,.32); border:0; font-size:0; line-height:0; background-repeat:no-repeat; background-position:50% 50%; background-size:contain}
+.main-visual .control li button.control-prev {background-image:url('../images/main/bt_prev.png')}
+.main-visual .control li button.control-next {background-image:url('../images/main/bt_next.png')}
+.main-visual .control li button.control-play {background-image:url('../images/main/bt_play.png'); display:none}
+.main-visual .control li button.control-pause {background-image:url('../images/main/bt_stop.png');}
+
+.main-visual-m {display:none}
+.main-visual-m .more {position:absolute; bottom:0; font-size:18px; line-height:72px; color:#fff; left:30px; width:300px; padding:0 70px 0 30px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;  height:72px; background:#3e8bd4; border-radius:72px;}
+.main-visual-m .more:after {content:"";position:absolute; top:0; right:30px; width:18px; height:100%;  background:url('../images/main/vis_arrow.png') 50% 50% no-repeat; }
+.main-visual-m .control {position:absolute; bottom:10px; right:15px;display:flex;}
+.main-visual-m .control li {line-height:0;}
+.main-visual-m .control li button {width:52px; height:52px; background-color:rgba(0,0,0,.32); border:0; font-size:0; line-height:0; background-repeat:no-repeat; background-position:50% 50%; background-size:contain}
+.main-visual-m .control li button.control-prev {background-image:url('../images/main/bt_prev.png')}
+.main-visual-m .control li button.control-next {background-image:url('../images/main/bt_next.png')}
+.main-visual-m .control li button.control-play {background-image:url('../images/main/bt_play.png'); display:none}
+.main-visual-m .control li button.control-pause {background-image:url('../images/main/bt_stop.png');}
+
+.section1 {margin-bottom:75px;}
+.section1 ul {display:flex; margin-left:-15px;}
+.section1 ul li {width:33.333333%; padding-left:15px;}
+.section1 ul li img {width:100%;}
+
+.section2 {margin-bottom:80px;}
+.section2 .row {display:flex;}
+.section2 .info {width:50%}
+.section2 .info p {font-size:20px; line-height:1.3em; color:#f17198; margin-bottom:5px;}
+.section2 .info h2 {font-size:40px; line-height:1.3em;color:#2c2c2c;font-weight:700; margin-bottom:35px;}
+.section2 .info ul {display:flex; flex-wrap:wrap; margin:0 -5px -20px;}
+.section2 .info ul li {padding:0 5px; margin-bottom:20px; text-align:center;}
+.section2 .info ul li a {display:inline-block; padding:0 26px; border:1px solid #a8a8a8; font-size:17px; line-height:40px; border-radius:42px; vertical-align:top; cursor:pointer;}
+.section2 .info ul li a:hover,
+.section2 .info ul li.active a {background:#f17198; border-color:#f17198; color:#fff;}
+.section2 .slider {width:50%}
+.section2 .slider a {display:flex;}
+.section2 .slider .photo {width:310px;}
+.section2 .slider .photo .img {position:relative; height:0; padding-bottom:100%; overflow:hidden;}
+.section2 .slider .photo .img img {position:absolute; top:50%; left:0; transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; max-height:100%; object-fit:cover; transition:all 0.25s ease-in-out;} 
+.section2 .slider .photo-info {flex:1 1 auto; width:1%; min-width:0; padding-left:20px;padding-top:10px; color:#2c2c2c;}
+.section2 .slider .photo-info h3 {font-size:25px; line-height:1.4em;  margin-bottom:10px;}
+.section2 .slider .photo-info p {font-size:18px; line-height:1.6em; margin-bottom:25px;}
+.section2 .slider .photo-info .more {font-size:16px; line-height:1.4em; color:#f17198;}
+.section2 .slider .photo-info .more:after {content:""; display:inline-block; vertical-align:top; width:15px; height:1.4em; background:url('../images/main/arrow.png') 50% 50% no-repeat; margin-left:10px;}
+.section2 .slider .slick-dots {position:absolute; bottom:10px; right:0; width:50%; padding-left:20px;display:flex; align-items:center; margin:0 -5px;text-align:center;} 
+.section2 .slider .slick-dots li {line-height:0;  padding:0 5px;}
+.section2 .slider .slick-dots li button {width:14px; height:14px; background:transparent; border:4px solid #dfdfdf; border-radius:50%; font-size:0; line-height:0;}
+.section2 .slider .slick-dots li.slick-active button {width:20px; height:20px; border-color:#f17198; background:#f17198}
+
+.section3 {background:#f7f8f3; padding:60px 0;}
+.section3 .row {display:flex; align-items:center; border-bottom:1px solid #dfdfdf; padding-bottom:40px; margin-bottom:40px;}
+.section3 .row:last-child {border-bottom:0; padding-bottom:0; margin-bottom:0;}
+.section3 .info {flex:1 1 auto; width:1%; min-width:0; padding-right:115px;}
+.section3 .info .tt {font-size:20px; line-height:1.4em; color:#77ad28; margin-bottom:10px;}
+.section3 .info h2 {font-size:34px; line-height:1.4em; color:#2c2c2c; font-weight:500; margin-bottom:10px;}
+.section3 .info .cnt {font-size:18px; line-height:1.6em;}
+.section3 .photo {width:444px}
+.section3 .photo .img {position:relative; height:0; padding-bottom:56.3%; overflow:hidden;}
+.section3 .photo .img img {position:absolute; top:50%; left:0; transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; max-height:100%; object-fit:cover; transition:all 0.25s ease-in-out;} 
+
+.section4 {padding:80px 0;}
+.section4 .slick-dots {justify-content:center; display:flex; align-items:center; padding-top:20px; margin:0 -6px;text-align:center;} 
+.section4 .slick-dots li {line-height:0;  padding:0 6px;}
+.section4 .slick-dots li button {width:14px; height:14px; background:transparent; border:4px solid #dfdfdf; border-radius:50%; font-size:0; line-height:0;}
+.section4 .slick-dots li.slick-active button {width:20px; height:20px; border-color:#1dbdef; background:#1dbdef}
+
+.section5 {background:#f4f4f4; padding:70px 0;}
+.section5 .title {text-align:center; margin-bottom:30px;}
+.section5 .title p {font-size:20px;line-height:1.4em; color:#405fb6; font-weight:500; margin-bottom:10px;} 
+.section5 .title h2 {font-size:40px; line-height:1.4em; color:#2c2c2c;}
+.section5 .menu {margin-bottom:30px;}
+.section5 .menu ul {display:flex; justify-content:center; flex-wrap:wrap; margin:0 -2px -10px;}
+.section5 .menu ul li {padding:0 2px; margin-bottom:10px; text-align:center;}
+.section5 .menu ul li a {display:inline-block; padding:0 20px; font-size:18px;line-height:50px; color:#505050; font-weight:500; border-radius:50px;}
+.section5 .menu ul li.active a {background:#3e8bd4; color:#fff;}
+.section5 .list ul {display:flex; flex-wrap:wrap; margin:0 -20px -25px;}
+.section5 .list ul li {width:25%; padding:0 20px; margin-bottom:25px;}
+.section5 .list ul li.none {width:100%; text-align:center; color:#999; padding:70px 0; font-size:14px; line-height:1.5em;}
+.section5 .list ul li .thumb {position:relative; height:0; padding-bottom:100%; margin-bottom:15px; overflow:hidden;}
+.section5 .list ul li .thumb img {position:absolute; top:50%; left:0; transform:translateY(-50%); width:100% !important; height:auto !important; max-width:100%; max-height:100%; object-fit:cover; transition:all 0.25s ease-in-out;} 
+.section5 .list ul li .brand {font-size:14px; line-height:1.4em; color:#1dbdef;margin-bottom:4px;}
+.section5 .list ul li .cnt {font-size:16px; line-height:1.6em; color:#2c2c2c; height:calc(1.6em * 1 * 2); overflow:hidden; text-overflow:ellipsis; word-break:break-all; white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+.section6 {padding:80px 0;}
+.section6 .row {display:flex; margin-bottom:20px;}
+.section6 h2 {font-size:28px; line-height:1.3em; color:#2c2c2c; font-weight:500; margin-bottom:20px;}
+.section6 .board {flex:1 1 auto; min-width:0; width:1%; border:1px solid #dfdfdf; padding:30px 40px;}
+.section6 .board .box {position:relative;}
+.section6 .board ul li {margin-bottom:15px; font-size:17px; line-height:1.4em; color:#878787;}
+.section6 .board ul li:last-child {margin-bottom:0;}
+.section6 .board ul li a {display:flex;}
+.section6 .board ul li .tit {flex:1 1 auto; min-width:0; width:1%; padding-right:100px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; transition:all 0.25s ease-in-out;}
+.section6 .board ul li .date {width:100px;}
+.section6 .board ul li a:hover .tit {text-decoration:underline; color:#f17198}
+.section6 .board .more {position:absolute; top:10px; right:0; font-size:14px; line-height:1.4em; display:inline-block;}
+.section6 .board .more:after {content:"";display:inline-block; vertical-align:top; width:15px; height:1.4em; background:url('../images/main/arrow.png') 50% 50% no-repeat; margin-left:10px;}
+.section6 .customer {width:340px; margin-left:20px; background:#edf0f8; padding:30px 40px;}
+.section6 .customer .group {display:flex; align-items:center; margin-bottom:20px;}
+.section6 .customer .group .icon {width:90px;}
+.section6 .customer .group .info {flex:1 1 auto; min-width:0; width:1%; padding-left:15px;}
+.section6 .customer .group .info .tel {font-size:30px; line-height:1.4em; color:#002078; font-weight:700; margin-bottom:10px;}
+.section6 .customer .group .info p {font-size:15px; line-height:1.4em; color:#2c2c2c}
+.section6 .customer .btns {display:flex; margin-left:-3px;}
+.section6 .customer .btns a {width:calc(50% - 3px); margin-left:3px; text-align:center; color:#fff; font-size:15px; line-height:42px;}
+.section6 .customer .btns a:nth-child(1) {background:#6ac040}
+.section6 .customer .btns a:nth-child(2) {background:#4992d7}
+.section6 .slick-arrow {position:absolute; top:50%; margin-top:-26px;width:52px;height:52px; box-shadow:0 0 5px rgba(0,0,0,.22);font-size:0; line-height:0; border:0; background-color:#fff; border-radius:50%; background-repeat:no-repeat; background-position:50% 50%; z-index:50}
+.section6 .slick-prev {left:-26px; background-image:url('../images/main/slide_prev.png');}
+.section6 .slick-next {right:-26px; background-image:url('../images/main/slide_next.png');}
+
+

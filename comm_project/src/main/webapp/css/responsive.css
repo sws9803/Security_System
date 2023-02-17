@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+@media (max-width: 1230px) {
+
+	/* main */
+
+
+	/* layout */
+
+	/* doc */
+
+
+
+}
+
+/* Landscape tablet */
+@media (max-width: 1024px) {
+	body, input, textarea, select, button, table {font-size:15px;}	
+
+	/* layout */
+	.btn-m-menu {display:block;}
+	#ws-header {height:80px;}
+	#ws-header .sitelogo {top:15px;}
+	#ws-header .sitelogo img {height:46px;}
+	#ws-gnb {display:none;}
+
+	
+
+	/* main */
+
+	/* layout */
+	
+	.ws-real-cont {padding-bottom:60px;}
+	
+	/* board */
+	.input {padding:5px 14px; height:40px;}
+	textarea.input {padding:12px 14px;}
+
+	.board-search .search input.input {width:240px;}
+
+	.board-list colgroup col {width:auto !important;}
+	.board-list table thead th {font-size:15px;}
+	.board-list table tbody td {font-size:15px;}
+
+	.gallery-list ul li .tit {font-size:15px;}
+
+	.news-list .thumb {width:200px;}
+	.news-list .tit {font-size:17px;}
+	.news-list .txt {font-size:14px;}
+	.news-list .date {font-size:13px;}
+
+	.event-list ul li .tit {font-size:15px;}
+
+	.faq .tit {font-size:15px;}
+	.faq .tit a {padding:9px 60px 9px 12px;}
+	.faq .tit a:after {top:14px;}
+	.faq .q {flex:0 0 32px; width:32px; height:32px; font-size:16px; line-height:32px;}
+	.faq .cnt {padding:18px 25px 18px 60px;}
+
+	.calendar-head h3 {font-size:28px; margin:0 30px;}
+	.calendar-head .cal-btn {width:40px; height:40px;}
+	.calendar table th {font-size:15px;}
+	.calendar table td {height:110px; font-size:14px;}
+	.calendar ul li:before {top:7px;}
+
+	.board-white table {font-size:15px;}
+
+	.board-form table {font-size:15px;}
+
+	.files-upload-text .upfiles-alt {font-size:14px;}
+
+	.board-view-tit {padding:14px 6px;}
+	.board-view-tit h3 {font-size:18px;}
+	.board-view-info {padding:13px 6px; font-size:13px;}
+	.board-view-cnt {padding:15px 6px 40px;}
+
+	.board-prev-next {font-size:14px;}
+
+	.btn-pack.medium {height:40px; padding:0 16px; font-size:15px; line-height:38px;}
+	.btn-pack.large {min-width:140px; height:50px; font-size:18px; line-height:48px;}
+
+	.product-list ul li {width:25%;}
+	.product-list ul li .tit {font-size:15px;}
+	.product-image {width:350px;}
+	.product-info .tit {font-size:25px;}
+
+	.store-search {padding:22px 5%;}
+	.store-search .map-area {width:280px;}
+	.store-search .map-img .local {padding:0 10px; font-size:13px; line-height:22px;}
+
+	.result-group .gall li {width:25%;}
+	
+	
+	/* footer */
+	
+	/* doc */
+	
+
+
+
+
+} 
+
+/* portrait tablet */
+@media (max-width: 900px) {	
+	.only-desktop {display:none;}
+	.only-tablet {display:block;}
+
+	/* board */	
+	.gallery-list ul {margin:0 -10px;}
+	.gallery-list ul li {width:33.33333333%; padding:0 10px;}
+
+	.event-list ul li {width:50%;}
+
+	.store-search {padding:30px; margin-bottom:30px;}
+	.store-search .map-area {display:none;}
+	.store-search .search-area h3 {text-align:center; margin-bottom:30px;}
+	
+	
+} 
+
+/* Landscape phone */
+@media (max-width: 640px) {
+	body, input, textarea, select, button, table {font-size:14px;}
+	.only-desktop-tablet {display:none;}
+	.only-tablet {display:none;}
+	.only-mobile {display:block;}
+
+	/* main */
+
+
+	/* layout */	
+	.mobile-navigation {width:100%;}
+
+
+
+	.ws-real-cont {padding-bottom:40px;}
+
+
+
+
+	/* board */
+	.input {font-size:14px; padding:0 10px; height:38px;}
+	select.input {padding-right:26px; background-image:url("../../images/bbs/select_x2.html"); background-position:right 8px center; background-size:12px auto;}
+	textarea.input {padding:7px 10px;}
+
+	.radiobox input:checked + label:before {background-image:url("../../images/bbs/radiobox_x2.html"); background-size:8px auto;}
+	.checkbox input:checked + label:before {background-image:url("../../images/bbs/checkbox_x2.html"); background-size:11px auto;}
+
+	.board-search {display:flex; flex-direction:column; margin-bottom:10px;}
+	.board-search .total-page {order:3; float:none; font-size:13px;}
+	.board-search .cate {float:none; order:1; margin-left:0; margin-bottom:5px;}
+	.board-search .cate .input {display:block; width:100%;}
+	.board-search .search {float:none; order:2;}
+	.board-search .search form {display:flex;}
+	.board-search .search .input {flex:1 1 auto; min-width:0; width:1%;}
+
+	.board-list {display:none;}
+	.board-list-m {display:block;}
+
+	.gallery-list {padding-top:15px;}
+	.gallery-list ul {margin:0 -7px;}
+	.gallery-list ul li {width:50%; padding:0 7px; margin-bottom:27px;}
+	.gallery-list ul li .thumb {margin-bottom:10px;}
+	.gallery-list ul li .tit {font-size:14px;}
+	.gallery-list ul li .date {font-size:12px; margin-top:4px;}
+
+	.news-list ul li {padding:17px 0;}
+	.news-list .thumb {width:38%; margin-right:14px;}
+	.news-list .tit {font-size:15px; max-height:2.8em; white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+	.news-list .txt {font-size:13px; margin-top:3px; max-height:3em; -webkit-line-clamp:2;}
+	.news-list .date {display:none;}
+
+	.event-list {padding-top:20px;}
+	.event-list ul li {width:100%; margin-bottom:32px;}
+	.event-list ul li .thumb {margin-bottom:10px;}
+	.event-list ul li .tit {font-size:15px;}
+	.event-list ul li .date {font-size:12px; margin-top:4px;}
+
+	.faq .tit a {padding:7px 0 7px 5px;}
+	.faq .tit a:after {display:none;}
+	.faq .q {flex:0 0 26px; width:26px; height:26px; font-size:15px; line-height:26px; margin-right:10px;}
+	.faq .cnt {padding:12px 12px 12px 15px;}
+
+	.calendar-head {margin-bottom:15px;}
+	.calendar-head h3 {font-size:20px; margin:0 17px;}
+	.calendar-head .cal-btn {width:34px; height:34px; background-size:9px auto;}
+	.calendar-head .cal-prev {background-image:url("../../images/bbs/cal_prev_x2.html");}
+	.calendar-head .cal-next {background-image:url("../../images/bbs/cal_next_x2.html");}
+	.calendar table th {padding:6px 4px; font-size:14px;}
+	.calendar table td {height:60px; padding:5px 4px; font-size:12px;}
+	.calendar ul li {padding-left:0; margin-bottom:6px;}
+	.calendar ul li:before {display:none;}
+	.calendar .cal-date {font-size:10px; margin-bottom:8px;}
+
+	.board-white table {display:block; border-top:0; border-bottom:0; font-size:14px;}
+	
+	.board-white table tbody {display:block;}
+	.board-white table tr {display:block; padding:12px 0;}
+	.board-white table th {display:block; border:0; text-align:left; padding:0; margin-bottom:7px; font-size:16px; background:none;}
+	.board-white table td {display:block; border:0; padding:0;}
+	.board-white .editor {padding:0; margin-top:-12px;}
+	.board-white .item {margin:3px 12px 3px 0;}
+	.board-white #user_name {max-width:100% !important;}
+	.board-white + .buttons {margin-top:30px;}
+
+	.board-form table tbody {display:block;}
+	.board-form table tr {display:block; padding:12px 0;}
+	.board-form table th {display:block; border:0; text-align:left; padding:0; margin-bottom:7px; font-size:16px; background:none;}
+	.board-form table td {display:block; border:0; padding:0;}
+	.board-form + .buttons {margin-top:30px;}
+
+	.form-agree {margin:30px 0 30px;}
+	.form-agree h3 {font-size:16px;}
+	.form-agree .scroll-box {font-size:12px; max-height:110px; overflow:auto;}
+	.form-agree .check {margin-top:12px; font-size:14px;}
+
+	.board-view-tit h3 {font-size:17px;}
+	.board-view-info {font-size:12px;}
+
+	.board-prev-next dl {padding:10px 6px;}
+	.board-prev-next dt {width:70px}
+
+	.buttons {margin:15px 0;}
+
+	.btn-pack.small {height:26px; padding:0 8px; font-size:11px; line-height:24px;}
+	.btn-pack.medium {height:38px; padding:0 14px; font-size:14px; line-height:36px;}
+	.btn-pack.large {min-width:120px; height:42px; padding:0 18px; font-size:15px; line-height:40px;}
+	.btn-pack.xlarge {min-width:120px; height:50px; padding:0 22px; font-size:16px; line-height:48px;}
+	.btn-pack.comment {width:80px; height:32px; font-size:14px;}
+
+	.paginate {margin-top:20px;}
+	.paginate a,  
+	.paginate strong{margin:0 1px;width:30px;height:30px;font-size:14px;line-height:30px;}  
+	.paginate a.direction {margin:0; background-size:11px;}
+	.paginate a.direction.first {background-image:url("../../images/bbs/btn_first_x2.html");}
+	.paginate a.direction.prev {background-image:url("../../images/bbs/btn_prev_x2.html"); margin-right:14px;}
+	.paginate a.direction.next {background-image:url("../../images/bbs/btn_next_x2.html"); margin-left:14px;}
+	.paginate a.direction.last {background-image:url("../../images/bbs/btn_last_x2.html");}
+
+	.comment-area {margin-top:37px;}
+	.comment-total {font-size:14px; margin-bottom:12px;}
+	.comment-write {position:relative; padding:10px;}
+	.comment-write .byte {position:absolute; bottom:15px; left:12px; font-size:12px;}
+	.comment-write .write {display:block;}
+	.comment-write .write textarea {display:block; width:100%; height:65px; margin-right:0;}
+	.comment-write .write .btn {text-align:right; margin-top:6px;}
+	.comment-item {padding:17px 4px;}
+	.comment-item.comment-reply {padding-left:25px; background-image:url("../../images/bbs/icon_reply_x2.html"); background-position:3px 18px; background-size:auto 13px;}
+	.comment-info {font-size:14px;}
+	.comment-info .name {margin-right:5px;}
+	.comment-info .date {font-size:11px;}
+	.comment-ctr {font-size:12px;}
+	.comment-ctr .bar {vertical-align:middle; margin:-.2em 4px 0;}
+	.comment-txt {font-size:14px;}
+	.comment-link {font-size:13px;}
+	.comment-input {padding:10px;}
+	.comment-input textarea {height:48px;}
+
+	.board-password {padding:30px 20px;}
+
+	.product-list ul {margin:0 -7px;}
+	.product-list ul li {width:50%; padding:0 7px; margin-bottom:27px;}
+	.product-list ul li .thumb {margin-bottom:10px;}
+	.product-list ul li .tit {font-size:14px;}
+	.product-summary {display:block;}
+	.product-image {width:100%; margin-bottom:20px;}
+	.product-info {width:100%;}
+	.product-info .tit {font-size:22px; padding-bottom:14px; margin-bottom:14px;}
+	.product-detail {padding-bottom:25px; margin-bottom:25px;}
+	.product-detail .tit {font-size:17px; padding-bottom:10px; margin-bottom:14px;}
+
+	.store-search {padding:0;}
+	.store-search .search-area h3 {font-size:16px; padding:15px 25px; margin-bottom:20px; background:#f4f4f4;}
+	.store-search .search-area dl {display:block; padding:0 15px; margin:20px 0;}
+	.store-search .search-area dl dt {width:auto; margin-bottom:6px; font-size:15px;}
+	.store-search .search-area dl dd {width:auto;}
+	.store-search .search-area input.input {width:calc(100% - 74px); margin-right:4px;}
+	.store-search .search-area select.input {width:calc(50% - 39px); margin-right:4px;}
+	.store-search .search-area .btn-pack.medium {width:70px;}
+
+	.result-top {font-size:18px;}
+	.result-group .gall {margin:0 -7px;}
+	.result-group .gall li {width:50%; padding:0 7px;}
+	.result-group dl dt {font-size:15px;}
+	.result-group dl dd {font-size:13px;}
+	.result-group dl dd.date {font-size:12px;}
+	
+
+	/* doc */
+	
+
+} 
+
+/* Landscape phones and down */
+@media (max-width: 320px) {
+
+} 
